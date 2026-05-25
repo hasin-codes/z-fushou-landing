@@ -63,7 +63,7 @@ export default function DesktopLoginPage() {
               <p className="text-muted-foreground text-sm">
                 You need to sign in first before connecting the desktop app.
               </p>
-              <SignInButton mode="redirect" redirectUrl="/desktop-login">
+              <SignInButton mode="redirect" forceRedirectUrl="/desktop-login">
                 <Button className="w-full cursor-pointer" size="lg">
                   Sign In to Continue
                 </Button>
