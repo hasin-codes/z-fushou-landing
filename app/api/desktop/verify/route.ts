@@ -76,21 +76,48 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const { data: sessionRow } = await supabaseAdmin
+    console.log("[VERIFY] Querying desktop_sessions where session_token =", sessionId)
+
+    const { data: sessionRow, error: dbError } = await supabaseAdmin
       .from("desktop_sessions")
-      .select("revoked")
+      .select("session_token, revoked, clerk_user_id")
       .eq("session_token", sessionId)
       .maybeSingle()
 
-    if (!sessionRow || sessionRow.revoked) {
-      console.log("[VERIFY] REJECTED: Session not found or revoked")
+    console.log("[VERIFY] Supabase result — data:", sessionRow, "error:", dbError)
+
+    if (dbError) {
+      console.error("[VERIFY] Supabase query error:", dbError)
+      return NextResponse.json(
+        { error: "Database error", detail: dbError.message },
+        { status: 500, headers }
+      )
+    }
+
+    if (!sessionRow) {
+      console.log("[VERIFY] REJECTED: No row found for session_token:", sessionId)
+      // Try a broader query to see if ANY sessions exist for this user
+      const { data: userSessions } = await supabaseAdmin
+        .from("desktop_sessions")
+        .select("session_token, revoked")
+        .eq("clerk_user_id", clerkUserId)
+        .limit(5)
+      console.log("[VERIFY] User's other sessions:", userSessions)
+      return NextResponse.json(
+        { error: "Session not found", sid: sessionId },
+        { status: 401, headers }
+      )
+    }
+
+    if (sessionRow.revoked) {
+      console.log("[VERIFY] REJECTED: Session is revoked — session_token:", sessionId)
       return NextResponse.json(
         { error: "Session revoked" },
         { status: 401, headers }
       )
     }
 
-    console.log("[VERIFY] SUCCESS — clerkUserId:", clerkUserId)
+    console.log("[VERIFY] SUCCESS — clerkUserId:", clerkUserId, "session_token:", sessionId)
     return NextResponse.json(
       { ok: true, clerkUserId },
       { headers }
