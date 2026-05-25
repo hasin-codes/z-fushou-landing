@@ -11,8 +11,16 @@ const ALLOWED_ORIGINS = [
   "http://localhost:4173",
 ]
 
+// Electron standalone server runs on 127.0.0.1 with a random port
+const ELECTRON_ORIGIN_RE = /^http:\/\/127\.0\.0\.1:\d+$/
+
+function isOriginAllowed(origin: string | null | undefined): boolean {
+  if (!origin) return false
+  return ALLOWED_ORIGINS.includes(origin) || ELECTRON_ORIGIN_RE.test(origin)
+}
+
 function corsHeaders(origin?: string | null) {
-  const allowed = origin && ALLOWED_ORIGINS.includes(origin)
+  const allowed = isOriginAllowed(origin)
     ? origin
     : ALLOWED_ORIGINS[0]
 
