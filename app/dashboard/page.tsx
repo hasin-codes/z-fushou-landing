@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExternalLink, Gift, Plus, Users, GitHub, MessageSquare, Zap, Clock, Settings, FileText, Mail, CreditCard, Package, LogOut } from 'lucide-react'
+import { ExternalLink, Gift, Plus, Users, MessageSquare, Zap, Clock, Settings, FileText, Mail, CreditCard, Package, LogOut } from 'lucide-react'
 import Link from 'next/link'
 
 function OverviewContent() {
