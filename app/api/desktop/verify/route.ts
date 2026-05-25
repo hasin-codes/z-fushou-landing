@@ -19,9 +19,9 @@ function isOriginAllowed(origin: string | null | undefined): boolean {
   return ALLOWED_ORIGINS.includes(origin) || ELECTRON_ORIGIN_RE.test(origin)
 }
 
-function corsHeaders(origin?: string | null) {
+function corsHeaders(origin?: string | null): Record<string, string> {
   const allowed = isOriginAllowed(origin)
-    ? origin
+    ? origin!
     : ALLOWED_ORIGINS[0]
 
   return {
