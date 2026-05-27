@@ -7,8 +7,8 @@ import { AnimatedGroup } from '@/components/ui/animated-group'
 import { HeroHeader } from './header'
 import { Logo } from '@/components/logo'
 
-const WINDOWS_URL = 'https://github.com/hasin-codes/Z-Fushou/releases/download/untagged-07fb0ae1f1a954951bcc/Z-Fushou-0.67.0-x64.exe'
-const MACOS_URL = 'https://github.com/hasin-codes/Z-Fushou/releases/download/untagged-07fb0ae1f1a954951bcc/Z-Fushou-0.67.0-arm64.dmg'
+const WINDOWS_URL = 'https://github.com/hasin-codes/Z-Fushou/releases/download/v0.67.0/Z-Fushou-0.67.0-x64.exe'
+const MACOS_URL = 'https://github.com/hasin-codes/Z-Fushou/releases/download/v0.67.0/Z-Fushou-0.67.0-arm64.dmg'
 
 // Windows Icon
 const WindowsIcon = ({ className }: { className?: string }) => (
