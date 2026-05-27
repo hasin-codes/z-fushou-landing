@@ -40,7 +40,7 @@ export function DesignerModal({ isOpen, onClose }: DesignerModalProps) {
         {/* Header */}
         <div className="text-center p-6 pb-4">
           <Link href="/" className="inline-block" onClick={onClose}>
-            <Image src="/icons/logo2.svg" alt="Z Fushou" className="h-8 w-auto mx-auto mb-4" width={128} height={32} />
+            <Image src="/icons/logo2.svg" alt="Z Fushou" className="h-20 w-20 mx-auto mb-4" width={80} height={80} />
           </Link>
           <h1 className="text-2xl font-bold text-foreground">
             {isSignUp ? 'Create your account' : 'Welcome back'}

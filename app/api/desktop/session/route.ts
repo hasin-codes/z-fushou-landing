@@ -50,6 +50,7 @@ export async function POST() {
     revoked: false,
     created_at: new Date().toISOString(),
     last_seen: new Date().toISOString(),
+    expires_at: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(),
   }
 
   console.log("[SESSION] Inserting into desktop_sessions:", JSON.stringify(insertPayload))

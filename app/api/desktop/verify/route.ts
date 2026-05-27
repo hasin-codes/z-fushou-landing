@@ -117,6 +117,35 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // --- Allowlist check (defense in depth) ---
+    const { data: allowedUser, error: allowError } = await supabaseAdmin
+      .from("allowed_users")
+      .select("allowed")
+      .eq("clerk_user_id", payload.sub)
+      .single()
+
+    if (allowError) {
+      console.error("[VERIFY] Allowlist query error:", allowError)
+      return NextResponse.json(
+        { error: "Database error", detail: allowError.message },
+        { status: 500, headers }
+      )
+    }
+
+    if (!allowedUser?.allowed) {
+      console.log("[VERIFY] REJECTED: User removed from allowlist — clerk_user_id:", clerkUserId)
+      return NextResponse.json(
+        { ok: false, error: "Access revoked" },
+        { status: 401, headers }
+      )
+    }
+
+    // --- Update last_seen (audit trail) ---
+    await supabaseAdmin
+      .from("desktop_sessions")
+      .update({ last_seen: new Date().toISOString() })
+      .eq("session_token", sessionId)
+
     console.log("[VERIFY] SUCCESS — clerkUserId:", clerkUserId, "session_token:", sessionId)
     return NextResponse.json(
       { ok: true, clerkUserId },

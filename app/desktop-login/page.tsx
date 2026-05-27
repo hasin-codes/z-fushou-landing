@@ -39,7 +39,7 @@ export default function DesktopLoginPage() {
       <div className="w-full max-w-md space-y-8 text-center">
         {/* Logo */}
         <div className="flex items-center justify-center gap-3">
-          <Logo className="h-8 w-auto" />
+          <Logo className="h-20 w-20" />
         </div>
 
         {/* Title */}

@@ -65,8 +65,8 @@ export default function HeroSection() {
                                     preset="fade-in-blur"
                                     speedSegment={0.3}
                                     as="h1"
-                                    className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-                                    Speak it, Send it
+                                    className="mx-auto mt-8 text-4xl max-md:font-semibold md:text-6xl lg:mt-16 xl:text-7xl">
+                                    Detect Problems Before Escalation
                                 </TextEffect>
                                 
                                 <TextEffect
@@ -75,8 +75,8 @@ export default function HeroSection() {
                                     speedSegment={0.3}
                                     delay={0.5}
                                     as="p"
-                                    className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-                                    We turn your voice into ready to use text - directly on your desktop.
+                                    className="mx-auto mt-8 max-w-3xl whitespace-nowrap text-lg">
+                                    Understands product pain, feature demand, and support pressure automatically.
                                 </TextEffect>
 
                                 <AnimatedGroup
@@ -100,8 +100,8 @@ export default function HeroSection() {
                                                 window.open('https://github.com/hasin-codes/sweesh.exe/releases/download/v1.4.2/Sweesh-Setup-1.4.2.exe', '_blank');
                                             }}
                                             className="hover:bg-primary/90 bg-primary group mx-auto flex w-fit items-center gap-4 rounded-full border border-primary p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950 cursor-pointer">
-                                            <WindowsIcon className="size-4 text-white" />
-                                            <span className="text-white text-sm font-medium">Download for Windows</span>
+                                            <WindowsIcon className="size-4 text-primary-foreground" />
+                                            <span className="text-primary-foreground text-sm font-medium">Download for Windows</span>
                                             <span className="dark:border-background block h-4 w-0.5 border-l bg-white/30 dark:bg-white/30"></span>
 
                                             <div className="bg-white/10 group-hover:bg-white/20 size-6 overflow-hidden rounded-full duration-500">

@@ -49,7 +49,7 @@ export const HeroHeader = () => {
                                     href="/"
                                     aria-label="home"
                                     className="flex items-center space-x-2">
-                                    <Image src="/icons/logo2.svg" alt="Z Fushou" className="h-5 w-auto" width={100} height={20} priority />
+                                    <Image src="/icons/logo2.svg" alt="Z Fushou" className="h-14 w-14" width={56} height={56} priority />
                                 </Link>
 
                                 <button
@@ -107,17 +107,7 @@ export const HeroHeader = () => {
                                             </Button>
                                         </>
                                     )}
-                                    {isSignedIn && (
-                                        <Button
-                                            asChild
-                                            variant="outline"
-                                            size="sm"
-                                            className={cn(isScrolled && 'lg:hidden', 'select-none')}>
-                                            <Link href="/dashboard">
-                                                <span>Dashboard</span>
-                                            </Link>
-                                        </Button>
-                                    )}
+                
                                     <Button
                                         size="sm"
                                         className={cn(isScrolled ? 'lg:inline-flex' : 'hidden', 'select-none')}
