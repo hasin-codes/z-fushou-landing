@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { Logo } from '@/components/logo'
 
 export default function FooterSection() {
     return (
@@ -9,7 +9,7 @@ export default function FooterSection() {
                     href="/"
                     aria-label="go home"
                     className="mx-auto block size-fit">
-                    <Image src="/icons/logo2.svg" alt="Z Fushou" className="mx-auto h-14 w-14" width={56} height={56} />
+                    <Logo className="mx-auto h-14 w-14" />
                 </Link>
 
                 <div className="my-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-sm">

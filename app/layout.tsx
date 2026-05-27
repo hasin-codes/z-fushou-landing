@@ -9,17 +9,17 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Z Fushou - Voice to Text Desktop App",
-  description: "Turn your voice into ready-to-use text directly on your desktop.",
+  title: "Z Fushou - Conversation Intelligence",
+  description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
   openGraph: {
-    title: "Z Fushou - Voice to Text Desktop App",
-    description: "Turn your voice into ready-to-use text directly on your desktop.",
+    title: "Z Fushou - Conversation Intelligence",
+    description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
     images: ["/api/og"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z Fushou - Voice to Text Desktop App",
-    description: "Turn your voice into ready-to-use text directly on your desktop.",
+    title: "Z Fushou - Conversation Intelligence",
+    description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
     images: ["/api/og"],
   },
 };

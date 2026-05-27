@@ -1,5 +1,5 @@
 # Security Contact Information
-# Z Fushou - Voice to Text Application
+# Z Fushou - Conversation Intelligence
 # Last Updated: October 22, 2025
 
 Contact: mailto:hasin.innit@gmail.com

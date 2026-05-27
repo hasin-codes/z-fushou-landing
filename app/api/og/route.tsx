@@ -112,7 +112,7 @@ export async function GET(req: Request) {
               maxWidth: 560,
             }}
           >
-            Turn your voice into ready-to-use text directly on your desktop.
+            Turns chaotic conversations into actionable intelligence.
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export async function GET(req: Request) {
               : "rgba(115,115,115,0.7)",
           }}
         >
-          Voice to Text Desktop App
+          Conversation Intelligence
         </p>
       </div>
     ),

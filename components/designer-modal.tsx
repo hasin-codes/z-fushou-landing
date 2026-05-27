@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { SignIn, SignUp } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { X } from 'lucide-react'
-import Image from 'next/image'
+import { Logo } from '@/components/logo'
 import Link from 'next/link'
 
 interface DesignerModalProps {
@@ -38,15 +38,15 @@ export function DesignerModal({ isOpen, onClose }: DesignerModalProps) {
         </Button>
 
         {/* Header */}
-        <div className="text-center p-6 pb-4">
+        <div className="text-center p-6 pb-2">
           <Link href="/" className="inline-block" onClick={onClose}>
-            <Image src="/icons/logo2.svg" alt="Z Fushou" className="h-20 w-20 mx-auto mb-4" width={80} height={80} />
+            <Logo className="h-20 w-20 mx-auto mb-4" />
           </Link>
           <h1 className="text-2xl font-bold text-foreground">
             {isSignUp ? 'Create your account' : 'Welcome back'}
           </h1>
           <p className="text-muted-foreground mt-2">
-            {isSignUp ? 'Join Z Fushou and start transcribing' : 'Sign in to your Z Fushou account'}
+            {isSignUp ? 'Start monitoring conversations with Z Fushou' : 'Sign in to continue to Z Fushou'}
           </p>
         </div>
         
@@ -58,9 +58,14 @@ export function DesignerModal({ isOpen, onClose }: DesignerModalProps) {
               appearance={{
                 elements: {
                   formButtonPrimary: 'bg-primary hover:bg-primary/90 text-primary-foreground',
-                  card: 'shadow-none border-0',
-                  formButton: 'select-none',
+                  card: 'shadow-none border-0 bg-transparent',
+                  rootBox: 'w-full flex justify-center',
+                  main: 'w-full',
+                  formField: 'w-full',
+                  form: 'w-full',
+                  formButton: 'select-none w-full',
                   button: 'select-none',
+                  socialButtonsBlockButton: 'w-full',
                 }
               }}
             />
@@ -70,9 +75,14 @@ export function DesignerModal({ isOpen, onClose }: DesignerModalProps) {
               appearance={{
                 elements: {
                   formButtonPrimary: 'bg-primary hover:bg-primary/90 text-primary-foreground',
-                  card: 'shadow-none border-0',
-                  formButton: 'select-none',
+                  card: 'shadow-none border-0 bg-transparent',
+                  rootBox: 'w-full flex justify-center',
+                  main: 'w-full',
+                  formField: 'w-full',
+                  form: 'w-full',
+                  formButton: 'select-none w-full',
                   button: 'select-none',
+                  socialButtonsBlockButton: 'w-full',
                 }
               }}
             />
