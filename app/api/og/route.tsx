@@ -5,7 +5,7 @@ export const runtime = "edge"
 async function getFont(): Promise<ArrayBuffer | undefined> {
   try {
     const res = await fetch(
-      "https://fonts.gstatic.com/s/plusjakartasans/v8/LDIoaomQNQcsA88c7O9yZ4KMCoOg4KoN5CxlhjMJMcA.ttf"
+      "https://cdn.jsdelivr.net/fontsource/fonts/plus-jakarta-sans@latest/latin-500-normal.ttf"
     )
     if (!res.ok) return undefined
     return await res.arrayBuffer()
@@ -25,8 +25,8 @@ export async function GET(req: Request) {
       name: string
       data: ArrayBuffer
       style: "normal" | "italic"
-      weight: number
-    }> = fontData
+      weight: 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+    }> | undefined = fontData
       ? [
           {
             name: "Plus Jakarta Sans",
@@ -35,7 +35,7 @@ export async function GET(req: Request) {
             weight: 500,
           },
         ]
-      : []
+      : undefined
 
     return new ImageResponse(
       (
