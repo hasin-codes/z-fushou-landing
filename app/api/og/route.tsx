@@ -21,15 +21,20 @@ export async function GET(req: Request) {
     const mode = (url.searchParams.get("mode") || "dark") as "dark" | "light"
     const isDark = mode === "dark"
 
-    const fonts = fontData
-      ? ([
+    const fonts: Array<{
+      name: string
+      data: ArrayBuffer
+      style: "normal" | "italic"
+      weight: number
+    }> = fontData
+      ? [
           {
             name: "Plus Jakarta Sans",
             data: fontData,
-            style: "normal" as const,
-            weight: 500 as number as 500,
+            style: "normal",
+            weight: 500,
           },
-        ] as const)
+        ]
       : []
 
     return new ImageResponse(
