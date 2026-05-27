@@ -9,6 +9,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zfushou.hasinraiyan.me"),
   title: "Z Fushou - Conversation Intelligence",
   description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
   openGraph: {
