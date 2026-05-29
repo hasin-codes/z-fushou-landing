@@ -19,39 +19,49 @@ export default function ChangelogsPage() {
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed mb-4">
-                                Bug fixes and polish — removed dead code, fixed inaccurate metrics, and smoothed out the initial load experience.
+                                Dashboard loading screen, UI contrast fixes, brand color update, and rename to ZFushou.
                             </p>
 
                             <div className="space-y-3">
-                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Improvements &amp; Fixes</h3>
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">What&apos;s New</h3>
                                 <ul className="space-y-2 text-sm">
                                     <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-red-500 shrink-0" />
-                                        <span>Removed <strong>Today&apos;s Highlights</strong> component — it displayed entirely static, hard-coded content including a fake &ldquo;+24% compared to last Wednesday&rdquo; metric with no real data source behind it</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
-                                        <span>Renamed <strong>&ldquo;Total Volume&rdquo;</strong> KPI label to <strong>&ldquo;Total Message&rdquo;</strong> for clearer semantics</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
-                                        <span>Connected the document icon button in the window control topbar — it now opens the documentation page</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
-                                        <span>Fixed <strong>community activity chart inflated numbers</strong> — speaker counts were summed across hourly buckets causing the same user to be counted multiple times; now uses authoritative KPI counts directly</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
-                                        <span>Fixed <strong>initial load flash of default data</strong> — overview data now waits for the topbar to set proper date range params instead of firing requests with empty dates that returned wrong defaults</span>
-                                    </li>
-                                    <li className="flex items-start gap-2">
-                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
-                                        <span>Fixed <strong>Electron binary resolution crash</strong> — <code className="rounded bg-muted px-1 text-xs">path.txt</code> had a trailing <code className="rounded bg-muted px-1 text-xs">\r\n</code> causing the wrong executable path on Windows</span>
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                        <span>Dashboard loading overlay with logo animation</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
-                                        <span>Version bump 0.67.0 → 0.68.0</span>
+                                        <span>Rebranded accent color from blue to brand green across the entire dashboard</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                        <span>Renamed to <strong>ZFushou</strong> across all surfaces</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div className="space-y-3 mt-5">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Fixes</h3>
+                                <ul className="space-y-2 text-sm">
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                        <span>Improved text contrast in hot topics detail view</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                        <span>Fixed pill and tab contrast in dark mode</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                        <span>Fixed inflated numbers in the activity chart</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                        <span>Fixed flash of wrong data on initial load</span>
+                                    </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                        <span>Fixed Electron crash on Windows from corrupted binary path</span>
                                     </li>
                                 </ul>
                             </div>
