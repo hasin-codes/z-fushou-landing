@@ -124,7 +124,7 @@ export default function HeroSection() {
                                                     <Logo className="size-7" />
                                                 </div>
                                                 <div className="flex flex-col items-start">
-                                                    <span className="text-primary-foreground text-sm font-semibold leading-tight">Z Fushou</span>
+                                                    <span className="text-primary-foreground text-sm font-semibold leading-tight">ZFushou</span>
                                                     <span className="text-primary-foreground/70 text-xs leading-tight">Download for Windows · x64</span>
                                                 </div>
                                                 <span className="dark:border-background mx-1 block h-8 w-px bg-white/20" />

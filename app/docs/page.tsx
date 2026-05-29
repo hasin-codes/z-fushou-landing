@@ -17,7 +17,7 @@ export default function DocsPage() {
                         </div>
                         <h2 className="text-xl font-semibold mb-2">Coming Soon</h2>
                         <p className="text-muted-foreground max-w-md mx-auto">
-                            I&apos;m working on comprehensive documentation for Z Fushou. Check back soon for setup guides, API references, and integration docs.
+                            I&apos;m working on comprehensive documentation for ZFushou. Check back soon for setup guides, API references, and integration docs.
                         </p>
                     </div>
                 </div>

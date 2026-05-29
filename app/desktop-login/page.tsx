@@ -48,7 +48,7 @@ export default function DesktopLoginPage() {
             Connect to Desktop
           </h1>
           <p className="text-muted-foreground text-sm">
-            Sign in with your account to link the Z Fushou desktop app.
+            Sign in with your account to link the ZFushou desktop app.
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function DesktopLoginPage() {
                 </svg>
               </div>
               <p className="text-muted-foreground text-sm">
-                Click below to open the Z Fushou desktop app with your account.
+                Click below to open the ZFushou desktop app with your account.
               </p>
               <Button
                 onClick={connectDesktop}
@@ -115,7 +115,7 @@ export default function DesktopLoginPage() {
 
         {/* Footer note */}
         <p className="text-muted-foreground/60 text-xs">
-          Make sure the Z Fushou desktop app is installed before connecting.
+          Make sure the ZFushou desktop app is installed before connecting.
         </p>
       </div>
     </div>

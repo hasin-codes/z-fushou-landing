@@ -10,16 +10,16 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zfushou.hasinraiyan.me"),
-  title: "Z Fushou - Conversation Intelligence",
+  title: "ZFushou - Conversation Intelligence",
   description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
   openGraph: {
-    title: "Z Fushou - Conversation Intelligence",
+    title: "ZFushou - Conversation Intelligence",
     description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
     images: ["/api/og"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z Fushou - Conversation Intelligence",
+    title: "ZFushou - Conversation Intelligence",
     description: "Turns chaotic conversations into actionable intelligence. Detects issues, frustration, and product pain in real time.",
     images: ["/api/og"],
   },

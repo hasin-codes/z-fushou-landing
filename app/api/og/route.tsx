@@ -114,7 +114,7 @@ export async function GET(req: Request) {
                   letterSpacing: "-0.03em",
                 }}
               >
-                Z Fushou
+                ZFushou
               </span>
             </div>
 

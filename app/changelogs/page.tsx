@@ -66,7 +66,7 @@ export default function ChangelogsPage() {
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed mb-4">
-                                This is the first beta release of Z Fushou. More updates and bug fixes will come.
+                                This is the first beta release of ZFushou. More updates and bug fixes will come.
                             </p>
 
                             <div className="space-y-3">
@@ -74,7 +74,7 @@ export default function ChangelogsPage() {
                                 <ul className="space-y-2 text-sm">
                                     <li className="flex items-start gap-2">
                                         <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
-                                        <span>Initial beta release of Z Fushou desktop app</span>
+                                        <span>Initial beta release of ZFushou desktop app</span>
                                     </li>
                                     <li className="flex items-start gap-2">
                                         <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />

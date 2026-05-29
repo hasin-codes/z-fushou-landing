@@ -46,7 +46,7 @@ export function DesignerModal({ isOpen, onClose }: DesignerModalProps) {
             {isSignUp ? 'Create your account' : 'Welcome back'}
           </h1>
           <p className="text-muted-foreground mt-2">
-            {isSignUp ? 'Start monitoring conversations with Z Fushou' : 'Sign in to continue to Z Fushou'}
+            {isSignUp ? 'Start monitoring conversations with ZFushou' : 'Sign in to continue to ZFushou'}
           </p>
         </div>
         
