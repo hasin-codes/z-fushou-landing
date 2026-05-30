@@ -37,6 +37,10 @@ export default function ChangelogsPage() {
                                         <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
                                         <span>Renamed to <strong>ZFushou</strong> across all surfaces</span>
                                     </li>
+                                    <li className="flex items-start gap-2">
+                                        <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                        <span>Added inner content surface layer to dashboard cards for better visual hierarchy</span>
+                                    </li>
                                 </ul>
                             </div>
 
