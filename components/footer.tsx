@@ -116,7 +116,13 @@ export default function FooterSection() {
                         </svg>
                     </Link>
                 </div>
-                <span className="text-muted-foreground block text-center text-sm"> © {new Date().getFullYear()} ZFushou, All rights reserved</span>
+                <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm">
+                    <span className="text-muted-foreground">© {new Date().getFullYear()} ZFushou</span>
+                    <span className="text-muted-foreground">·</span>
+                    <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary duration-150">Privacy Policy</Link>
+                    <span className="text-muted-foreground">·</span>
+                    <Link href="/terms-of-service" className="text-muted-foreground hover:text-primary duration-150">Terms of Service</Link>
+                </div>
             </div>
         </footer>
     )
