@@ -10,21 +10,79 @@ export default function ChangelogsPage() {
                     <h1 className="text-3xl font-bold tracking-tight mb-8">Changelogs</h1>
 
                     <div className="space-y-6">
-                        {/* v0.90.0 */}
+                        {/* v0.93.0 */}
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
-                                <h2 className="text-xl font-semibold">v0.90.0</h2>
+                                <h2 className="text-xl font-semibold">v0.93.0</h2>
                                 <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">In Development Preview</span>
                                 <span className="text-muted-foreground text-sm">Upcoming</span>
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed mb-6">
-                                This is the biggest update yet. ZFushou is getting a live discussion engine that processes messages within seconds of them arriving, groups them into coherent conversations, and keeps AI generated summaries and timelines updated in real time. This runs alongside the existing nightly pipeline so nothing about how things work today is changing.
+                                Live engine v2. Smarter conversation matching, case lifecycle improvements, daily reset, and credential isolation between the live engine and nightly pipeline.
                             </p>
 
                             <div className="space-y-4">
                                 <div>
-                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">What&apos;s Coming</span>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">What&apos;s Changing</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>The live engine now searches across the whole server for matching conversations, not just the same channel. It uses a two tier matching system where messages in the same channel can match more loosely, while cross channel matches need to be more similar to count.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Cases that were recently closed can now be reopened if a related message comes in within a few hours. This preserves context instead of starting a brand new case for the same topic.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>All open cases close automatically at 2 AM Beijing time and the vector index gets wiped clean for a fresh start each day.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>The nightly pipeline and the live engine now run on completely separate credentials so a change or issue in one cannot affect the other.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-yellow-500">Fixed</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Unknown status values now throw an error immediately instead of silently falling back to something wrong.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Closed case lookups are now batched once per cycle instead of querying per message, which cuts down unnecessary database calls.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Lock timeout is longer now and gets refreshed mid batch so large batches cannot lose the lock halfway through.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>The engine retries lock acquisition on startup so rolling deploys do not leave it locked out.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                        {/* v0.90.0 */}
+                        <article className="rounded-2xl border bg-card p-6 md:p-8">
+                            <div className="flex flex-wrap items-center gap-3 mb-4">
+                                <h2 className="text-xl font-semibold">v0.90.0</h2>
+                                <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">Beta</span>
+                            </div>
+
+                            <p className="text-muted-foreground leading-relaxed mb-6">
+                                Biggest update yet. ZFushou now has a live discussion engine that processes messages within seconds of them arriving, groups them into coherent conversations, and keeps AI generated summaries and timelines updated in real time. This runs alongside the existing nightly pipeline so nothing about how things work today has changed.
+                            </p>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">New</span>
                                     <ul className="mt-2 space-y-2 text-sm">
                                         <li className="flex items-start gap-2">
                                             <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
