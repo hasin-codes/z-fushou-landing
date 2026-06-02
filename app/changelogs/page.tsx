@@ -10,6 +10,76 @@ export default function ChangelogsPage() {
                     <h1 className="text-3xl font-bold tracking-tight mb-8">Changelogs</h1>
 
                     <div className="space-y-6">
+                        {/* v0.90.0 */}
+                        <article className="rounded-2xl border bg-card p-6 md:p-8">
+                            <div className="flex flex-wrap items-center gap-3 mb-4">
+                                <h2 className="text-xl font-semibold">v0.90.0</h2>
+                                <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">In Development Preview</span>
+                                <span className="text-muted-foreground text-sm">Upcoming</span>
+                            </div>
+
+                            <p className="text-muted-foreground leading-relaxed mb-6">
+                                This is the biggest update yet. ZFushou is getting a live discussion engine that processes messages within seconds of them arriving, groups them into coherent conversations, and keeps AI generated summaries and timelines updated in real time. This runs alongside the existing nightly pipeline so nothing about how things work today is changing.
+                            </p>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">What&apos;s Coming</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>A live engine that picks up new messages every few seconds, figures out which ongoing conversation they belong to, and attaches them to the right case automatically.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Each conversation gets a running summary, a status (active, being looked into, resolved, or gone quiet), a routing label (product side, user side, or mixed), and an attention score so you can immediately see what needs eyes on it.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Live timelines that capture the important moments of each conversation as it evolves, not just at the end.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Conversations that go quiet for a while close themselves automatically with a final summary. If the topic shifts mid conversation, the engine detects the shift and opens a fresh case so summaries stay focused.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Unanswered questions inside each conversation are tracked and surfaced separately so nothing gets lost in the noise.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Internal safety guards: the engine validates every vector before using it, runs health checks on startup before going live, and uses a distributed lock so multiple workers never step on each other.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-blue-500">Also Changing</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>The nightly pipeline runs earlier so results are ready by the time you wake up instead of late morning.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>When the AI fails to parse a response internally, the raw output now gets logged so debugging is much faster.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-yellow-500">Fixed</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Monitored mentions are now protected from the weekly retention sweep so they stick around permanently for the mentions system.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </article>
+
                         {/* v0.70.0 */}
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
