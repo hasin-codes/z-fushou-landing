@@ -7,9 +7,86 @@ export default function ChangelogsPage() {
             <HeroHeader />
             <main className="flex-1 pt-32 pb-16">
                 <div className="mx-auto max-w-3xl px-6">
-                    <h1 className="text-3xl font-bold tracking-tight mb-8">Changelogs</h1>
+                    <h1 className="text-3xl font-bold tracking-tight mb-4">Changelogs</h1>
+
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-8">
+                        Not every version number will appear here. Some releases were backend only, some addressed security issues that cannot be disclosed publicly, some were deprecated or pulled due to platform compatibility problems between Windows and macOS, and others had issues that warranted removal. Only user facing and notable changes are documented.
+                    </p>
 
                     <div className="space-y-6">
+                        {/* v0.98.0 */}
+                        <article className="rounded-2xl border bg-card p-6 md:p-8">
+                            <div className="flex flex-wrap items-center gap-3 mb-4">
+                                <h2 className="text-xl font-semibold">v0.98.0</h2>
+                                <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">In Development Preview</span>
+                                <span className="text-muted-foreground text-sm">Upcoming</span>
+                            </div>
+
+                            <p className="text-muted-foreground leading-relaxed mb-6">
+                                This is the largest update ever shipped for ZFushou. The dashboard has been rebuilt from the ground up to support real time intelligence, there is a completely new page for exploring every topic your community has ever discussed, and everything is wired together with a unified caching layer that makes the entire app feel instant.
+                            </p>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">New</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Live Activity Feed. A real time widget on the dashboard that polls every thirty seconds and shows every active discussion happening across your community. Cases merge into the timeline as they appear, grouped by day with color coded attention indicators so you can immediately see which conversations need eyes on them. Each item shows a two line summary for context at a glance.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Discussed Topics page. A full page dedicated to every topic your community has discussed, organized by date in a horizontal gallery you can scroll independently. Each topic card shows the AI generated summary and opens into a three panel detail view with the full analysis, key issues, and unanswered questions. Data is preloaded the moment you open the app so the page is ready before you even click it.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Unified data cache. Replaced the old per page caching with a single shared store that holds overview, mentions, and discussed topics data all in one place. Switching between pages requires zero network requests and renders instantly. The cache handles stale while revalidate logic automatically so data stays fresh without ever blocking the interface.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Hot Topics widget now has a View All button that takes you straight to the full Discussed Topics page where you can browse the complete archive without date constraints.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-blue-500">Improved</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Mentioned page now loads five hundred mentions instead of one hundred, uses properly bounded UTC date ranges for accuracy across timezones, and has active row highlighting so you can see which mention you selected when it opens in the Discord sidebar.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Dashboard bento grid has been restructured to fit the new Live Activity feed alongside the Mentioned widget. Every responsive breakpoint from desktop down to mobile has been updated so nothing overflows or collapses.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Sidebar now includes a direct link to the Discussed Topics page and the date range picker hides itself automatically on pages that do not use date filtering.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Removed the unused placeholder tabs that were taking up space in the conversation insights header.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-yellow-500">Fixed</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Resolved a persistent CORS issue where edge function responses were being blocked by the browser security policy in the desktop app. Headers are now intercepted and corrected at the session level before they reach the renderer.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Fixed zoom level initialization and Discord sidebar bounds reset so the desktop app starts and recovers from login mode with the correct scaling every time.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
                         {/* v0.93.0 */}
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
