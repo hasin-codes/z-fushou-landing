@@ -18,8 +18,7 @@ export default function ChangelogsPage() {
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
                                 <h2 className="text-xl font-semibold">v0.98.0</h2>
-                                <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">In Development Preview</span>
-                                <span className="text-muted-foreground text-sm">Upcoming</span>
+                                <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">Pre Release</span>
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed mb-6">
@@ -91,8 +90,7 @@ export default function ChangelogsPage() {
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
                                 <h2 className="text-xl font-semibold">v0.93.0</h2>
-                                <span className="rounded-full bg-orange-500/10 px-3 py-0.5 text-xs font-medium text-orange-500">In Development Preview</span>
-                                <span className="text-muted-foreground text-sm">Upcoming</span>
+                                <span className="rounded-full bg-primary/10 px-3 py-0.5 text-xs font-medium text-primary">Beta</span>
                             </div>
 
                             <p className="text-muted-foreground leading-relaxed mb-6">
