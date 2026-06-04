@@ -14,6 +14,145 @@ export default function ChangelogsPage() {
                     </p>
 
                     <div className="space-y-6">
+                        {/* v1.0.0 */}
+                        <article className="rounded-2xl border bg-card p-6 md:p-8">
+                            <div className="flex flex-wrap items-center gap-3 mb-4">
+                                <h2 className="text-xl font-semibold">v1.0.0</h2>
+                                <span className="rounded-full bg-green-500/10 px-3 py-0.5 text-xs font-medium text-green-500">Stable</span>
+                                <span className="text-muted-foreground text-sm">4 Jun 2026</span>
+                            </div>
+
+                            <p className="text-muted-foreground leading-relaxed mb-6">
+                                After months of iteration across 30+ beta versions, ZFushou 1.0.0 is here. The first stable release. A complete Discord community intelligence platform with real time monitoring, topic analysis, mention tracking, and live activity feeds, all in a native desktop app.
+                            </p>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">New Pages</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span><strong>Discussed Topics.</strong> Browse every AI clustered discussion topic across your community with a horizontal date gallery, adaptive card grid, time filters (All, 7 days, 30 days, 90 days), and a detail modal with Summary, Key Issues, and Questions panels that each scroll independently.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span><strong>Live Activity.</strong> A full page real time feed of every tracked case in your community. Filter by attention level (Critical, High, Medium, Low) and time range (Past 1h, 6h, 24h, 7 days). Each case shows its summary, timestamp, and current status with attention colored indicators.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span><strong>Mentioned (Redesigned).</strong> Rebuilt from scratch with a clean 3 column table (Author, Summary, Date and Time), active row highlighting, rounded container, and refresh controls.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span><strong>Discord Deep Links.</strong> Clicking any case in the Live Activity page opens the Discord sidebar directly to the latest message in that conversation. It uses the thread when available, falls back to the channel, and scrolls to the exact message. The link updates with every poll cycle so clicking the same case five minutes later takes you to the newer message. Works even when the sidebar is already open.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">Dashboard</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>New Live Activity widget with a real time timeline feed, attention colored dots, animated connector path, and a live connection indicator. Includes a View All link to the full Activity page.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>New weekly Activity Heatmap visualizing message volume by hour across the past week, properly aligned to Beijing time with correct day boundaries.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Conversation Insights redesigned with a View All link to the Mentioned page and a Refresh button.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Hot Topics now has a View All link to the full Discussed Topics page.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Bento grid restructured to fit everything with proper spacing across all breakpoints from desktop down to mobile.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-green-500">Live Timeline System</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>A custom SVG timeline connector with a geometric path that routes around section headers and active items using straight segments with minimal radius corners. On hover, a colored light travels along the actual path geometry following every detour precisely.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-green-500 shrink-0" />
+                                            <span>Four attention levels with distinct color palettes (slate, amber, orange, rose) and a subtle resting state at lower opacity that becomes prominent only on interaction.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-blue-500">Performance</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Heatmap queries collapsed from 7 sequential calls into a single call that buckets results client side by day.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Live timeline polling interval optimized.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Cluster data is fetched once and shared between the search palette and the Discussed Topics page instead of calling separately.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>All polling and auto refresh intervals pause when the app window is minimized or hidden and resume immediately when visible again.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-blue-500">Navigation</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Discussed Topics and Activity added to the sidebar with their own icons.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Generic user avatars replaced with unique hash based pixel art using a green color palette, different for every user.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Date picker hides automatically on pages that do not use date filtering.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-blue-500 shrink-0" />
+                                            <span>Settings icon removed for a cleaner navigation bar.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <span className="text-xs font-medium uppercase tracking-wider text-yellow-500">Fixed</span>
+                                    <ul className="mt-2 space-y-2 text-sm">
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Resolved persistent CORS issue where edge function responses were being blocked by the browser security policy in the desktop app.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Fixed zoom level initialization and Discord sidebar bounds reset so the app starts with correct scaling every time.</span>
+                                        </li>
+                                        <li className="flex items-start gap-2">
+                                            <span className="mt-1.5 size-1.5 rounded-full bg-yellow-500 shrink-0" />
+                                            <span>Clicking a second case in Live Activity or Mentioned now correctly navigates the Discord sidebar to the new message instead of staying on the old one. The sidebar now forces a reload even when it is already open.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
                         {/* v0.98.0 */}
                         <article className="rounded-2xl border bg-card p-6 md:p-8">
                             <div className="flex flex-wrap items-center gap-3 mb-4">
